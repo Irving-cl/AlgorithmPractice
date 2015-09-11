@@ -1,0 +1,25 @@
+Rotate
+
+解法一：
+Matrix matrix = new Matrix[ N ][ N ];
+readIn( matrix );
+Result result = new Result();
+matrix.rightGravity();
+for each line in matrix
+    checkLineLeft( line, result );
+matrix.rightRotate();
+for each line in matrix
+    checkLineRight( line, result );
+for each possible diagnal in matrix
+    checkLineLeft( diagnal.toLine(), result );
+return result;
+
+结果：
+1.对于样例，迅速产生正确结果；
+2.对于small-practice.in，迅速产生正确结果；
+3.对于large-practice.in，迅速产生正确结果；
+
+编写过程：
+    一上来看到题目就觉得很复杂。整体的算法不是一口气就完成的，因为脑中浮现了很多细节处可以让程序运行更快。比如说checkLine时是同时检测红蓝还是只检测一种颜色检测两次、如何在result的red和blue都为true时不再进行接下来的检测、如何尽可能地减少对角线的检测数量......最终选checkLine选择了同时检测红色和蓝色；rightGravity，即又对齐，采用了stack来实现，一开始实现的时候走了些弯路；
+    刚编写完时有错误，连样例都有错，稍微调试后，对样例的输出结果正确。随后small-practice.in检测错误，但是却通过了large-practice.in检测正确。small-practice.in有一百个测试用例，我根本无法知道错在了哪里。我一度陷入绝望，时间也快到12点了。我怀疑错误是diagnal的检测，于是我在small-practice.in挑了一个7*7的用例追踪对角线的检测。果然发现了问题，我检测对角线时把被empty隔开的格子连到了一起，怪不得出错了。修正错误后，结果正确，我在电脑屏幕前双手握拳，看到correct的时候的心情难以言喻。
+    这次的用时恐怕又是创新高了，不算构思的时间，估计也用了四五个小时。

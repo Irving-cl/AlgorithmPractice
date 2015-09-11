@@ -1,0 +1,24 @@
+File Fix-it
+
+解法一：
+BTree fileSystem = new BTree();
+for each existedDir in inputFile
+    fileSystem.add( existedDir );
+int numRealExistedDirs = fileSystem.size();
+for each dirToMake in inputFile
+    fileSystem.add( dirToMake );
+return fileSystem.size() - numRealExistedDirs;
+
+关键在于add和size这两个例程；
+add在多叉树中插入数个节点，估计最坏情形用时O（ N^2 ）；
+size通过递归的方法计算多叉树内部节点数；
+
+结果：
+1.对于样例，迅速产生正确结果；
+2.对于small-practice.in，迅速产生正确结果；
+3.对于large-practice.in，迅速产生正确结果；
+
+编写过程：
+不久就确立了多叉树的解法，采用的数据结构也算不上是B树，是从二项队列中得到的启发。
+用了不到一小时完成所有的编码。
+第一次运行结果错误，发现是size例程错误，经过了不到一小时的调试，得到正确结果，通过三项测试。

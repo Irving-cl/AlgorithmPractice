@@ -1,0 +1,28 @@
+Alien Language
+
+解法一：
+1.将所有的alienWords读入一个set,产生Set<String> alienWords
+2.对于一个case，将每个位置上所有可能的字符作为一个String，产生String [] source
+3.将source进行组合，产生所有的组合可能String [] possibleWords
+4.遍历possibleWords中的每个单词word，查看word是否属于alienWords，统计word的个数，word的个数即为那个case的答案
+结果：
+1.对于样例结果正确；
+2.对于small-practice.in，内存用满，原因应该是组合出的String太多，possibleWords不够放了；
+
+解法二：
+1.将所有的alienWords读入一个set,产生Set<String> alienWords
+2.对于一个case，将每个位置上所有可能的字符作为一个String，产生String [] source
+3.用递归方法Combination直接遍历组合而不存储任何最终组合出来的单词
+4.对于每个组合出来的单词word，查看word是否属于alienWords，统计word的个数，word的个数即为那个case的答案
+结果：
+1.对于样例结果正确；
+2.对于small-practice.in，内存没有用满，但是用时过长，至少两分钟之内没能解出，应该是组合情况过多导致；
+
+解法三：
+1.将所有的alienWords读入一个set,产生Set<String> alienWords
+2.对于一个case，将每个位置上所有可能的字符作为一个String，产生String [] source
+3.对于alienWords中的每个单词word，检测word的每个位置上的字母在source对应位置的string上是否存在。若全都存在，则说明word是可能的。统计满足要求的word的个数，word的个数即为那个case的答案
+结果：
+1.对于样例结果正确；
+2.对于small-practice.in，迅速产生正确结果；
+3.对于large-practice.in，迅速产生正确结果；

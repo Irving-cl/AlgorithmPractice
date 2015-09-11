@@ -1,0 +1,31 @@
+Rope Intranet
+
+解法一：
+int numWires = read numWires;
+List<Wire> wireList = new List<Wire>();
+BinaryBalanceTree<Integer> existedRightWindows = new BinaryBalanceTree<Integer>();
+read all wires to wireList;
+wireList.sort();
+
+int intersections = 0;
+for each wire in wireList( from small to big in portA )
+{
+    intersections += existedRightWindows.elementsBiggerThan( wire's portB );
+    existedRightWindows.insert( wire's portB );
+}
+
+return intersections;
+
+elementsBiggerThan，求出在一颗二叉树中值大于x的元素个数，
+该例程粗略估计最坏情形用时O( N(logN)^2  )
+
+结果：
+1.对于样例结果正确；
+2.对于small-practice.in，迅速产生正确结果；
+3.对于large-practice.in，迅速产生正确结果；
+
+编写过程：
+采用该解法前考虑过其他解法，花费了不少时间。
+编写elementsBiggerThan例程花费了极长的时间。
+从9/3晚上开始写，晚上通过了small-practice.in测试，但未通过large-practice.in测试。
+9/4早上调试large-practice.in测试中的一个大测试样例，发现了elementsBiggerThan例程中的错误，其中调用treeSize求出一棵树的节点数的例程错了。修改后通过了large-practice.in测试。
