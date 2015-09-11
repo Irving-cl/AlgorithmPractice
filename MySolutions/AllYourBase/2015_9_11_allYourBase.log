@@ -1,0 +1,21 @@
+AllYourBase
+
+解法一：
+String warSecondsCrypted = read input;
+int base = different number of characters in warSecondsCrypted;
+base = max( 2, base );
+Map<char, int> symbolTable = new Map<char, int>();
+for each char in warSecondsCrypted
+    if ( !symbolTable.contains( char ) )
+        symbolTable.put( char, distributeDigitTo( char ) );
+long warSeconds = calculate( warSecondsCrypted, symbolTable );
+return warSeconds;
+
+结果：
+1.对于样例，迅速产生正确结果；
+2.对于small-practice.in，迅速产生正确结果；
+3.对于large-practice.in，迅速产生正确结果；
+
+编写过程：
+    这次过程较前几次快多了，总共一个小时不到就完成了，我觉得题目较之前几道而言要来得简单。一上来题目没看懂，花了好久才看懂什么意思。
+    看懂题目之后算法就比较顺利成章地定下来了，也非常简单。刚完成时直接通过了样例测试。接着测试small-practice.in时出了错，没有考虑base必须大于1这一点。修改完之后通过了small-practice.in。然后测试large-practice.in，又出错了。吓了一跳，点开了output.txt，发现出现了负数，明显是int越界的问题。于是把int改为long，通过了large-practice.in的测试。
