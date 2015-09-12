@@ -1,0 +1,27 @@
+Standing Ovation
+
+解法一：
+int sMax = read Input;
+int numFriends = 0, numStandAudiences = 0, curShynessLevel = 0;
+int [] shynessLevelList = new[ sMax + 1 ];
+readIn( shynessLevelList );
+while( curShynessLevel <= sMax )
+{
+    skipEmptyLevel( curShynessLevel );
+    if( numStandAudiences < curShynessLevel )
+        numFriends += ( curShynessLevel - numStandAudiences );
+        numStandAudiences = curShynessLevel + shynessLevelList[ curShynessLevle++ ];
+    else
+        numStandAudiences += shynessLevelList[ curShynessLevel++ ];
+}
+return numFriends;
+
+结果：
+1.对于样例，迅速产生正确结果；
+2.对于small-practice.in，迅速产生正确结果；
+3.对于large-practice.in，迅速产生正确结果；
+
+编写过程：
+    这次过程应该是有史以来最快的了吧。一上来看完题目有些不知所措，脑中浮现了很多的想法。因为觉得这个题目本身很有趣，有一些递归的味道。不过我并没有考虑用递归来解决这个问题。
+    想了一会儿，还是慢慢看清了问题的本质，想出了解决方法。题目确实一点都不难。
+    半小时不到就编写完成，一开始犯了些小错，并不值得一提。修改完毕后通过所有测试。加上考虑的时间也就五十分钟左右完成了。
