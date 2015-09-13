@@ -1,4 +1,5 @@
 # AlgorithmPractice
 My practice for algorithm
 
-Recently I tried to solve the problems on code jam. Up till now, I can solve the problems on my own although some of the problems is a little bit challenged for me.
+Recently I tried to solve the problems on code jam. I upload my solutions and other good programmers' solutions here so that I can view my code and their code and learn from them anywhere so long as there's an access to the internet.
+^_^
