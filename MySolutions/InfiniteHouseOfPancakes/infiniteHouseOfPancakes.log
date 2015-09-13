@@ -1,0 +1,21 @@
+Infinite House of Pancakes
+
+解法一（错误）：
+int totalMinutes = 0;
+while( pancakes are left )
+    if special minute is meaningful
+        server.specialMinute();
+    else
+        diners.eat();
+return totalMinutes;
+
+bool isSpecialMinuteMeaningful
+    return ( mostPancakes / 2 ) > numMostPancakes;
+
+结果：
+1.对于样例，迅速产生正确结果；
+2.对于small-practice.in，结果错误；
+3.对于large-practice.in，结果错误； 
+
+编写过程：
+    这是第一次碰到了解决不了的问题，也是第一次算法本身错了。因为实在找不到错误的原因，所以运行了其他人的代码，对比了答案，发现了错误。发现的那个错误是这样的：对于单个9，可以用两次分成3个3，这样总共耗时5分钟；而按我的对半分法，最后用了6分钟；这点是我想算法的时候完全没想到的。所以这次我真的束手无策了。不过我想我总会碰到我解不出的题目的。这次我打算看别人的解法了。不过我觉得这道题可能也不是非常难，可能是我想的方向错了吧。
