@@ -19,3 +19,5 @@ return warSeconds;
 编写过程：
     这次过程较前几次快多了，总共一个小时不到就完成了，我觉得题目较之前几道而言要来得简单。一上来题目没看懂，花了好久才看懂什么意思。
     看懂题目之后算法就比较顺利成章地定下来了，也非常简单。刚完成时直接通过了样例测试。接着测试small-practice.in时出了错，没有考虑base必须大于1这一点。修改完之后通过了small-practice.in。然后测试large-practice.in，又出错了。吓了一跳，点开了output.txt，发现出现了负数，明显是int越界的问题。于是把int改为long，通过了large-practice.in的测试。
+
+日期：2015.9.11

@@ -29,3 +29,5 @@ elementsBiggerThan，求出在一颗二叉树中值大于x的元素个数，
 编写elementsBiggerThan例程花费了极长的时间。
 从9/3晚上开始写，晚上通过了small-practice.in测试，但未通过large-practice.in测试。
 9/4早上调试large-practice.in测试中的一个大测试样例，发现了elementsBiggerThan例程中的错误，其中调用treeSize求出一棵树的节点数的例程错了。修改后通过了large-practice.in测试。
+
+日期：2015.9.4
