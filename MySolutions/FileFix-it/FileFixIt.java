@@ -98,7 +98,7 @@ public class FileFixIt {
     	    {
     		BNode child = root.firstChild;
     		int size = 1;
-    		while( child != null)
+    		while( child != null )
     		{
     		    size += sizeOf( child );
     		    child = child.next;
