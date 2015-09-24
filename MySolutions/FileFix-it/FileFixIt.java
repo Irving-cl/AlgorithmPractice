@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class FileFixIt {
 
-	// Nested class
+    // Nested class
     private static class BTree
     {
     	public BTree()
