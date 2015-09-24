@@ -13,7 +13,7 @@ public class FileFixIt {
     {
     	public BTree()
     	{	
-    		root = new BNode( "root" );
+    	    root = new BNode( "root" );
     	}
 		
     	public void add( String dirName )
@@ -44,7 +44,7 @@ public class FileFixIt {
 		
     	public int size()
     	{
-    		return sizeOf( root ) - 1;
+    	    return sizeOf( root ) - 1;
     	}
 		
     	// Member variables
