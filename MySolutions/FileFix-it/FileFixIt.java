@@ -26,16 +26,16 @@ public class FileFixIt {
     		if( nextDir == null )
     		{
     		    BNode lastChild = lastChild( currentDir );
-    			if( lastChild == null )
-    			{
-    			    currentDir.firstChild = new BNode( path[ i ] );
-    			    nextDir = currentDir.firstChild;
-    			}
-    			else
-    			{
-    			    lastChild.next = new BNode( path[ i ] );
-    			    nextDir = lastChild.next;
-    			}
+                    if( lastChild == null )
+                    {
+                        currentDir.firstChild = new BNode( path[ i ] );
+    			nextDir = currentDir.firstChild;
+                     }
+                     else
+                     {  
+                         lastChild.next = new BNode( path[ i ] );
+    			 nextDir = lastChild.next;
+                     }
 						
     		}
     		currentDir = nextDir;
