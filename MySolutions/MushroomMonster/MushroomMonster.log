@@ -1,0 +1,9 @@
+Mushroom Monster
+
+解法一：
+int minMushroom；
+对于method1，只要后一个时刻的mushroom比当前时刻的mushroom少，minMushroom就加上两个时刻mushroom的差；
+对于method2，先求出后减前的最大值，这个最大值即为导致正确结果的eating rate。再遍历一次，将当前时刻的Mushroom数与eating rate比较。若num大于eating rate，则minMushroom += eating rate。否则，minMushroom += num；
+
+编写过程：
+    这道题目是A轮第一题，比较简单。但是看懂题目花费了我很长时间。看懂之后也不是立即就知道怎么做了，还是稍微想了一会儿。不过确实没有什么难度。
