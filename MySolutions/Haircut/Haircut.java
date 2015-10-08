@@ -21,17 +21,17 @@ public class Haircut {
             for( int i = 0; i < B; i++ )
                 barbers[ i ] = Integer.parseInt( bbs[ i ] );
 		    
-		    // Find out time
-		    long time = 1;
+            // Find out time
+            long time = 1;
             for( ; ; )
-		    {
+            {
                 if( sum( time, barbers ) >= N )
-		        	break;
+		    break;
                 time = time * 2;
             }
             long exactTime = findOutTime( time / 2, time, barbers, N );
 		    
-		    // Find out the barber
+	    // Find out the barber
             long kthInMinute = N - sum( exactTime - 1, barbers );
             int i = -1, j = 0;
             for( ; ; )
@@ -54,9 +54,9 @@ public class Haircut {
     		return start;
     	long middle = ( start + end ) / 2;
     	if( sum( middle, barbers ) < n )
-    		return findOutTime( middle + 1, end, barbers, n );
+    	    return findOutTime( middle + 1, end, barbers, n );
     	else
-    		return findOutTime( start, middle, barbers, n );
+    	    return findOutTime( start, middle, barbers, n );
     }
 
     private static long sum( long time, int [] barbers )
